@@ -34,6 +34,11 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'playwright site',
+      use: { ...devices['Desktop Chrome'] },
+      testDir: 'tests/pw-tests'
+    },
+    {
       name: "coffee-cart",
       use: { ...devices["Desktop Chrome"] },
       testDir: "tests/coffee-cart-tests",
@@ -44,9 +49,14 @@ export default defineConfig({
       testDir: "tests/condulit-tests",
     },
     {
-      name: 'playwright site',
-      use: { ...devices['Desktop Chrome'] },
-      testDir: 'tests/pw-tests'
+      name: "telemart",
+      use: { ...devices["Desktop Chrome"] },
+      testDir: "tests/telemart-tests",
+    },
+    {
+      name: "other",
+      use: { ...devices["Desktop Chrome"] },
+      testDir: "tests/other-tests",
     },
     // {
     //   name: 'firefox',
